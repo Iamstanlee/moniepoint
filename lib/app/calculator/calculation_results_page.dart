@@ -1,12 +1,31 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_animate/flutter_animate.dart';
 import 'package:moniepoint/core/design_system/color.dart';
 import 'package:moniepoint/core/design_system/components/button.dart';
 import 'package:moniepoint/core/design_system/spacing.dart';
 import 'package:moniepoint/core/design_system/typography.dart';
 import 'package:moniepoint/core/extensions/context.extension.dart';
 
-class CalculationResultsPage extends StatelessWidget {
+class CalculationResultsPage extends StatefulWidget {
   const CalculationResultsPage({super.key});
+
+  @override
+  State<CalculationResultsPage> createState() => _CalculationResultsPageState();
+}
+
+class _CalculationResultsPageState extends State<CalculationResultsPage>
+    with SingleTickerProviderStateMixin {
+  late final AnimationController _countController;
+
+  @override
+  void initState() {
+    super.initState();
+    _countController = AnimationController(
+      duration: 2.seconds,
+      upperBound: 1474,
+      vsync: this,
+    )..forward();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -31,11 +50,14 @@ class CalculationResultsPage extends StatelessWidget {
               style: MpTypography.h2,
             ),
             const SizedBox(height: MpSpacing.m),
-            Text(
-              '\$1474 USD',
-              textAlign: TextAlign.center,
-              style: MpTypography.h1.withColor(
-                Colors.greenAccent.withGreen(225),
+            AnimatedBuilder(
+              animation: _countController,
+              builder: (context, _) => Text(
+                '\$${_countController.value.toInt()} USD',
+                textAlign: TextAlign.center,
+                style: MpTypography.h1.withColor(
+                  Colors.greenAccent.withGreen(225),
+                ),
               ),
             ),
             const SizedBox(height: MpSpacing.s),

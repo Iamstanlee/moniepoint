@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_animate/flutter_animate.dart';
 import 'package:moniepoint/app/home/mockdata/vehicle_data.dart';
 import 'package:moniepoint/core/design_system/color.dart';
 import 'package:moniepoint/core/design_system/spacing.dart';
@@ -44,6 +45,6 @@ class VehicleInfoCard extends StatelessWidget {
           ],
         ),
       ),
-    );
+    ).animate().slideX(begin: 0.5, end: 0);
   }
 }

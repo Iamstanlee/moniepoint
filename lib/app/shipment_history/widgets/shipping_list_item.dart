@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_animate/flutter_animate.dart';
 import 'package:moniepoint/app/shipment_history/enums/shipping_status.enum.dart';
 import 'package:moniepoint/app/shipment_history/extensions/shipping_status.extension.dart';
 import 'package:moniepoint/core/design_system/color.dart';
@@ -58,7 +59,7 @@ class ShippingListItem extends StatelessWidget {
           ],
         ),
       ),
-    );
+    ).animate().fade(begin: 0.2, end: 1).slideY(begin: 0.5, end: 0);
   }
 }
 

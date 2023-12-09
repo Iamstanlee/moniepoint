@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_animate/flutter_animate.dart';
 import 'package:moniepoint/app/home/mockdata/search_data.dart';
 import 'package:moniepoint/core/design_system/color.dart';
 import 'package:moniepoint/core/design_system/components/search_bar.dart';
@@ -57,7 +58,7 @@ class SearchPage extends StatelessWidget {
           },
           separatorBuilder: (context, index) => const Divider(height: 0),
         ),
-      ),
+      ).animate().slideY(begin: 0.2, end: 0,curve: Curves.ease),
     );
   }
 }

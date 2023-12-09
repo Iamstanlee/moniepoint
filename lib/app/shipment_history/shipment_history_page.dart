@@ -35,6 +35,7 @@ class _ShipmentHistoryPageState extends State<ShipmentHistoryPage>
     return Scaffold(
       appBar: AppBar(
         title: Text('Shipment History', style: MpTypography.body2),
+        centerTitle: true,
         bottom: TabBar(
           controller: _tabController,
           indicatorColor: MpColor.secondary500,

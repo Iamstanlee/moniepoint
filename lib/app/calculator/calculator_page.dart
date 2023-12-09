@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_animate/flutter_animate.dart';
 import 'package:moniepoint/app/calculator/calculation_results_page.dart';
 import 'package:moniepoint/app/calculator/widgets/heading_text.dart';
 import 'package:moniepoint/app/calculator/widgets/package_type_selection.dart';
@@ -18,6 +19,7 @@ class CalculatorPage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text('Calculate', style: MpTypography.body2),
+        centerTitle: true,
       ),
       body: SingleChildScrollView(
         padding: const EdgeInsets.all(MpSpacing.m),
@@ -88,7 +90,7 @@ class CalculatorPage extends StatelessWidget {
                     onSelected: (_) {},
                   ),
               ],
-            ),
+            ).animate().slideX(begin: 0.5, end: 0),
             const SizedBox(height: MpSpacing.xl),
             MpButton(
               label: 'Calculate',
@@ -96,7 +98,7 @@ class CalculatorPage extends StatelessWidget {
             ),
           ],
         ),
-      ),
+      ).animate().fade(begin: 0.2, end: 1).slideY(begin: 0.2, end: 0),
     );
   }
 }

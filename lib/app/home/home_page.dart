@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_animate/flutter_animate.dart';
 import 'package:moniepoint/app/home/mockdata/vehicle_data.dart';
 import 'package:moniepoint/app/home/search/search_page.dart';
 import 'package:moniepoint/app/home/widgets/appbar_column.dart';
@@ -48,7 +49,7 @@ class HomePage extends StatelessWidget {
             _VehicleListView(),
           ],
         ),
-      ),
+      ).animate().fade(begin: 0.2, end: 1).slideY(begin: 0.2, end: 0),
     );
   }
 }
