@@ -14,4 +14,4 @@ design on dribble.
 
 ### Download 📱
 
-- [APK](https://github.com/Iamstanlee/monie_point/releases/download/v1.0.0/monie_point.apk)
+- [APK](https://github.com/Iamstanlee/moniepoint/releases/download/v1.0.0/moniepoint.apk)

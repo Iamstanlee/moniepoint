@@ -51,6 +51,7 @@ class SearchPage extends StatelessWidget {
               title: Text(shipping.itemName, style: MpTypography.body2),
               subtitle: Text(
                 '#${shipping.id} \u2022 ${shipping.source} \u2794 ${shipping.destination}',
+                style: MpTypography.body1.withColor(MpColor.grey400),
               ),
             );
           },

@@ -96,7 +96,7 @@ class _UnImplementedPage extends StatelessWidget {
       body: Center(
         child: Text(
           "Nothing to see here.",
-          style: MpTypography.body1.setColor(MpColor.black50).setSize(18),
+          style: MpTypography.body1.withColor(MpColor.black50).withSize(18),
         ),
       ),
     );

@@ -28,7 +28,7 @@ class ShippingListItem extends StatelessWidget {
                   const SizedBox(height: MpSpacing.xs),
                   Text(
                     'Your delivery #MP-123456789 from Berlin, is arriving today',
-                    style: MpTypography.body1,
+                    style: MpTypography.body1.withColor(MpColor.grey400),
                   ),
                   const SizedBox(height: MpSpacing.s),
                   Text.rich(
@@ -37,12 +37,12 @@ class ShippingListItem extends StatelessWidget {
                         TextSpan(
                           text: '\$650 USD ',
                           style: MpTypography.body2
-                              .setSize(14)
-                              .setColor(MpColor.primary700),
+                              .withSize(14)
+                              .withColor(MpColor.primary700),
                         ),
                         TextSpan(
                           text: '\u2022 Sept 20, 2023',
-                          style: MpTypography.label,
+                          style: MpTypography.label.withColor(MpColor.grey500),
                         ),
                       ],
                     ),
@@ -89,7 +89,7 @@ class _StatusInfoContainer extends StatelessWidget {
           const SizedBox(width: MpSpacing.xs),
           Text(
             status.statusStr,
-            style: MpTypography.label.setColor(status.color),
+            style: MpTypography.label.withColor(status.color),
           ),
         ],
       ),

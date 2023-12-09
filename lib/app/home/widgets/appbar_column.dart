@@ -25,7 +25,7 @@ class AppBarColumn extends StatelessWidget {
               padding: const EdgeInsetsDirectional.only(start: MpSpacing.xs),
               child: Text(
                 'Your location',
-                style: MpTypography.label.setColor(MpColor.grey200),
+                style: MpTypography.label.withColor(MpColor.grey200),
               ),
             ),
           ],

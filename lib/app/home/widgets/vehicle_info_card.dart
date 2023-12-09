@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:moniepoint/app/home/mockdata/vehicle_data.dart';
+import 'package:moniepoint/core/design_system/color.dart';
 import 'package:moniepoint/core/design_system/spacing.dart';
 import 'package:moniepoint/core/design_system/typography.dart';
 
@@ -27,7 +28,7 @@ class VehicleInfoCard extends StatelessWidget {
                   ),
                   Text(
                     vehicle.info,
-                    style: MpTypography.label,
+                    style: MpTypography.label.withColor(MpColor.grey400),
                   ),
                 ],
               ),

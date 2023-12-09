@@ -5,6 +5,8 @@ extension ContextExtension on BuildContext {
       Navigator.push<T>(this, _transitTo(() => page));
 
   Future<bool> pop<T>([T? result]) => Navigator.maybePop(this, result);
+
+  void popUntilHome() => Navigator.popUntil(this, (route) => route.isFirst);
 }
 
 const double _kDefaultDuration = .25;

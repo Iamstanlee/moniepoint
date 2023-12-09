@@ -21,9 +21,12 @@ class TrackingShipmentCard extends StatelessWidget {
               ),
               title: Text(
                 'Shipment number',
-                style: MpTypography.label.setColor(MpColor.grey500),
+                style: MpTypography.label.withColor(MpColor.grey500),
               ),
-              subtitle: Text('MP-1234567890', style: MpTypography.h2.bold),
+              subtitle: Text(
+                'MP-1234567890',
+                style: MpTypography.h2.withColor(MpColor.black500).bold,
+              ),
             ),
             const Divider(),
             GridView(
@@ -57,7 +60,8 @@ class TrackingShipmentCard extends StatelessWidget {
                         child: const SizedBox.expand(),
                       ),
                       const SizedBox(width: MpSpacing.xs),
-                      Text('2 - 3 days', style: MpTypography.body2.bold),
+                      Text('2 - 3 days',
+                          style: MpTypography.body1.withSize(16)),
                     ],
                   ),
                 ),
@@ -83,7 +87,7 @@ class TrackingShipmentCard extends StatelessWidget {
                   const SizedBox(width: MpSpacing.xs),
                   Text(
                     'Add Stop',
-                    style: MpTypography.body2.setColor(MpColor.secondary500),
+                    style: MpTypography.body2.withColor(MpColor.secondary500),
                   ),
                 ],
               ),
@@ -132,12 +136,12 @@ class _InfoItem extends StatelessWidget {
             children: [
               Text(
                 label,
-                style: MpTypography.label.setColor(MpColor.grey500),
+                style: MpTypography.label.withColor(MpColor.grey500),
               ),
               valueWidget ??
                   Text(
                     value!,
-                    style: MpTypography.body2.bold,
+                    style: MpTypography.body1.withSize(16),
                   ),
             ],
           ),

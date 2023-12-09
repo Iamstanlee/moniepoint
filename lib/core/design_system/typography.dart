@@ -30,9 +30,9 @@ class MpTypography {
 }
 
 extension TextStyleExtenstion on TextStyle {
-  TextStyle setColor(Color color) => copyWith(color: color);
+  TextStyle withColor(Color color) => copyWith(color: color);
 
-  TextStyle setSize(double fontSize) => copyWith(fontSize: fontSize);
+  TextStyle withSize(double fontSize) => copyWith(fontSize: fontSize);
 
   TextStyle get bold => copyWith(fontWeight: FontWeight.bold);
 }

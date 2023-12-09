@@ -68,7 +68,7 @@ class _ShipmentHistoryPageState extends State<ShipmentHistoryPage>
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: [
-                  Text('Shipments', style: MpTypography.h1.setSize(18)),
+                  Text('Shipments', style: MpTypography.h1.withSize(18)),
                   const SizedBox(height: MpSpacing.s),
                   ShippingListView(status),
                 ],
@@ -95,7 +95,7 @@ class _TabHeader extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        Text(name, style: MpTypography.body1.setSize(16)),
+        Text(name, style: MpTypography.body1.withSize(16)),
         const SizedBox(width: MpSpacing.xs),
         Container(
           padding: const EdgeInsets.symmetric(
