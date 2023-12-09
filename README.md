@@ -11,6 +11,11 @@ design on dribble.
     <img src="/preview/s2.png" width="200px" hspace="10"/>
     <img src="/preview/s3.png" width="200px" hspace="10"/>
 </p>
+<p>
+    <img src="/preview/s4.png" width="200px" hspace="10"/>
+    <img src="/preview/s5.png" width="200px" hspace="10"/>
+    <img src="/preview/s6.png" width="200px" hspace="10"/>
+</p>
 
 ### Download 📱
 
