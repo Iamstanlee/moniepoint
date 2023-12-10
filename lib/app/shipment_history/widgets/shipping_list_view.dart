@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_animate/flutter_animate.dart';
 import 'package:moniepoint/app/shipment_history/enums/shipping_status.enum.dart';
 import 'package:moniepoint/app/shipment_history/extensions/shipping_status.extension.dart';
 import 'package:moniepoint/app/shipment_history/widgets/shipping_list_item.dart';
@@ -15,7 +16,12 @@ class ShippingListView extends StatelessWidget {
       shrinkWrap: true,
       physics: const NeverScrollableScrollPhysics(),
       itemCount: status.count,
-      itemBuilder: (_, __) => ShippingListItem(status),
+      itemBuilder: (_, index) =>
+          ShippingListItem(status).animate().fadeIn().slideY(
+                delay: 50.ms * index,
+                begin: 0.2,
+                end: 0,
+              ),
       separatorBuilder: (_, __) => const SizedBox(height: MpSpacing.s),
     );
   }

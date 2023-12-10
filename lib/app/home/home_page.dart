@@ -49,7 +49,7 @@ class HomePage extends StatelessWidget {
             _VehicleListView(),
           ],
         ),
-      ).animate().fade(begin: 0.2, end: 1).slideY(begin: 0.2, end: 0),
+      ).animate().fadeIn().slideY(begin: 0.2, end: 0),
     );
   }
 }
@@ -71,7 +71,11 @@ class _VehicleListView extends StatelessWidget {
         itemCount: listOfVehicles.length,
         itemBuilder: (context, index) => VehicleInfoCard(
           listOfVehicles[index],
-        ),
+        ).animate().fadeIn().slideX(
+              delay: 50.ms * index,
+              begin: 0.2,
+              end: 0,
+            ),
         separatorBuilder: (context, index) => const SizedBox(
           width: MpSpacing.s,
         ),

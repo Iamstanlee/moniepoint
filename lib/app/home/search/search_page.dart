@@ -54,11 +54,15 @@ class SearchPage extends StatelessWidget {
                 '#${shipping.id} \u2022 ${shipping.source} \u2794 ${shipping.destination}',
                 style: MpTypography.body1.withColor(MpColor.grey400),
               ),
-            );
+            ).animate().fadeIn().slideY(
+                  delay: 50.ms * index,
+                  begin: 0.4,
+                  end: 0,
+                );
           },
           separatorBuilder: (context, index) => const Divider(height: 0),
         ),
-      ).animate().slideY(begin: 0.2, end: 0,curve: Curves.ease),
+      ),
     );
   }
 }

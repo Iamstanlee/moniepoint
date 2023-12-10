@@ -41,10 +41,10 @@ class VehicleInfoCard extends StatelessWidget {
                 vehicle.imageUrl,
                 height: 148,
               ),
-            ),
+            ).animate(delay: 200.ms).slideX(begin: 0.2, end: 0),
           ],
         ),
       ),
-    ).animate().slideX(begin: 0.5, end: 0);
+    );
   }
 }

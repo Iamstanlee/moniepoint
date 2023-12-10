@@ -59,7 +59,7 @@ class ShippingListItem extends StatelessWidget {
           ],
         ),
       ),
-    ).animate().fade(begin: 0.2, end: 1).slideY(begin: 0.5, end: 0);
+    ).animate().fadeIn().slideY(begin: 0.5, end: 0);
   }
 }
 

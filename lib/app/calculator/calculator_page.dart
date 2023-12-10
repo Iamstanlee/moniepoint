@@ -89,8 +89,8 @@ class CalculatorPage extends StatelessWidget {
                     checkmarkColor: MpColor.grey0,
                     onSelected: (_) {},
                   ),
-              ],
-            ).animate().slideX(begin: 0.5, end: 0),
+              ].animate(interval: 50.ms).fadeIn().slideX(begin: 0.2, end: 0),
+            ),
             const SizedBox(height: MpSpacing.xl),
             MpButton(
               label: 'Calculate',
@@ -98,7 +98,7 @@ class CalculatorPage extends StatelessWidget {
             ),
           ],
         ),
-      ).animate().fade(begin: 0.2, end: 1).slideY(begin: 0.2, end: 0),
+      ).animate().fadeIn().slideY(begin: 0.2, end: 0),
     );
   }
 }
